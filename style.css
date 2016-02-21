@@ -1,0 +1,65 @@
+@font-face{
+    font-family: Alexandra Zeferino Two;
+    src: url(fonts/alexandra_zeferino_two.ttf) format('opentype');
+}
+
+body{
+    background: url(img/11.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    height: auto;
+}
+
+header{
+    width: auto;
+    height: 75px;
+    color: crimson;
+    text-align: center;
+    font-family: Alexandra Zeferino Two;
+}
+
+article{
+    width: auto;
+    height: 280px;
+    background: url(img/arnamient-1.png) repeat-x;
+}
+
+#cities {
+	float: left;
+	width: 90px;
+	margin-right: 30px;
+	margin-left: 10px;
+	border-right: white 1px dotted;
+}
+#cities img {
+	display: inline-block;
+	margin: 0 0 10px 0;
+	border: 1px solid rgb(0,0,0);
+}
+#photo {
+    width: auto;
+    height:auto;
+	position: relative;
+}
+#photo img {
+	position: absolute;
+}
+#description{
+    float: right;
+    width: 390px;
+    height: 600px;
+}
+
+.selected{
+    font-weight: normal;
+}
+
+.coats{
+    margin-left: 125px;   
+}
+
+.letter{
+    margin-left: 125px;
+    color: crimson;
+    font-size: 44px;
+    font-family: Alexandra Zeferino Two, serif;
+}

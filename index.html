@@ -1,0 +1,100 @@
+<DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+       <link rel="stylesheet" type="text/css" href="style.css">
+       <script src="jquery-2.2.0.min.js"></script>
+    
+       <script>
+         $(document).ready(function(){
+        $('#cities a').click(function(evt){
+            evt.preventDefault();
+            var imgCl = $(this).attr('class');
+            var imgPath = $(this).attr('href');
+            var desc = $('#'+imgCl);
+            desc.removeClass('cities');
+            $('.cities').hide();
+            $('#'+imgCl).fadeIn(3000);
+            var oldImage = $('#photo img');
+            var newImage = $('<img src="' + imgPath +'" width="700" height = "480">');
+            newImage.hide();
+            $('#photo').prepend(newImage);
+            newImage.fadeIn(1000);
+            $('#description').prepend(desc);
+            desc.addClass('cities');
+            oldImage.fadeOut(1000, function(){
+                $(this).remove();
+            });
+            
+        });
+            
+          $('#cities a:first').click();
+               
+               });
+        </script>
+        
+        <title>Беларусь</title>
+    </head>
+    
+    <body>
+       <header>
+           <h1>ДОБРО ПОЖАЛОВАТЬ В БЕЛАРУСЬ!!!</h1>
+       </header>
+       <article>
+       </article>
+       
+           <div id="cities">
+               <a href="img/brest.jpg" class="brest"><img src="img/brest.jpg" width="70" height="70"></a>
+               <a href="img/gomel.jpg" class="gomel"><img src="img/gomel.jpg" width="70" height="70"></a>
+               <a href="img/grodno.jpg" class="grodno"><img src="img/grodno.jpg" width="70" height="70"></a>
+               <a href="img/minsk.jpg" class="minsk"><img src="img/minsk.jpg" width="70" height="70"></a>
+               <a href="img/mogilyov.jpg" class="mogilyov"><img src="img/mogilyov.jpg" width="70" height="70"></a>
+               <a href="img/vitebsk.jpg" class="vitebsk"><img src="img/vitebsk.jpg" width="70" height="70"></a>
+           </div>
+            <div id="photo">
+            </div>
+            <div id="description">
+              </div>
+               <div id="brest" class="cities">
+                   <p><span class="letter">Брест</span></p>
+                   <p>Западный форпост Беларуси. Вошел в мировую историю благодаря героической обороне войск СССР. Брестская крепость имеет статус Город-Герой.</p>
+                   <img src="img/brest.png" width="120px" height="160px" class="coats">
+               </div>
+               
+               <div id="gomel" class="cities">
+                   <p><span class="letter">Гомель</span></p>
+                   <p>Второй по величине город Беларуси. Известен как резиденция князей Речи Посполитой, а затем и Российской Империи.</p>
+                   <img src="img/300px-Coat_of_Arms_of_Homiel_Belarus.svg_.png" width="120px" height="160px" class="coats">
+               </div>
+               
+               <div id="grodno" class="cities">
+                   <p><span class="letter">Гродно</span></p>
+                   <p>Самый европейский город Беларуси. Часть своей истории был в составе Польши, что, безусловно, оставило исторический след на архитектуре города.</p>
+                   <img src="img/grodno.png" width="120px" height="160px" class="coats">
+               </div>
+               
+               <div id="minsk" class="cities">
+                   <p><span class="letter">Минск</span></p>
+                   <p>Столица и крупнейший город Республики Беларусь. Во времена Второй мировой войны был до основания разрушен, а затем восстановлен.</p>
+                   <img src="img/Coat_of_arms_of_Minsk.svg.png" width="120px" height="160px" class="coats">
+               </div>               
+               
+               <div id="mogilyov" class="cities">
+                   <p><span class="letter">Могилев</span></p>
+                    <p>Город в восточной части Беларуси. В Могилеве находилась резиденция последнего Российского императора.</p>
+                    <img src="img/mogilev.png" width="120px" height="160px" class="coats">
+               </div>
+               
+               <div id="vitebsk" class="cities">
+                   <p><span class="letter">Витебск</span></p>
+                    <p>Культурная столица Беларуси. Самый старейший из областных центров страны. Первое упоминание в летописи было датировано </p>
+                    <img src="img/600px-Coat_of_Arms_of_Viciebsk,_Belarus.svg.png" width="120px" height="160px" class="coats">   
+               </div> 
+                
+            <footer>
+                
+            </footer>
+            
+            
+    </body>
+</html>
